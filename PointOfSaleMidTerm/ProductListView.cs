@@ -15,7 +15,7 @@ namespace PointOfSaleMidTerm
             for (int i = 0; i < this.Products.Count; i++)
             {
                 Product p = this.Products[i];
-                Console.WriteLine($"\t{i}\t{p.Name}\t{p.Category}\t{p.Description}\t{p.Price}");
+                Console.WriteLine($"\t{i,-3}|{p.Name,-15}|{p.Category,-8}|{p.Description,-30}|${p.Price}");
             }
         }
     }
