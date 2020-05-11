@@ -47,6 +47,7 @@ namespace PointOfSaleMidTerm
                     paymentDetails.GetPayment(SelectedProducts.GetGrandTotal());
                     Receipt rcpt = new Receipt(SelectedProducts, paymentDetails);
                     rcpt.Display();
+                    
                     SelectedProducts.Clear();
                 }
             }
