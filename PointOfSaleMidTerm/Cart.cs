@@ -16,7 +16,8 @@ namespace PointOfSaleMidTerm
             foreach (Product item in Items.Keys)
             {
                 if (item.Name == product.Name)
-                {           
+                {
+                    product.Qty = qty + product.Qty;                
                     Items[item] += qty;
                     found = true;
                     break;
@@ -24,7 +25,8 @@ namespace PointOfSaleMidTerm
             }
             if (!found)
             {
-                product.Qty = qty + product.Qty;
+             
+                product.Qty = qty + product.Qty;    
                 Items.Add(product, qty);
             }
         }
