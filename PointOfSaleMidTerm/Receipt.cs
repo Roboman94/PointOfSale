@@ -39,9 +39,9 @@ namespace PointOfSaleMidTerm
             ProductsCart.Display();
             this.DoTotal();
             PaymentDetails.Display();
-            Console.WriteLine($"Subtotal: {Subtotal}\n");
-            Console.WriteLine($"Sales Tax @ {TaxRate * 100} % : {SalesTax}\n");
-            Console.WriteLine($"Grand Total: {GrandTotal}\n");
+            Console.WriteLine($"\tSubtotal: ${Subtotal}\n");
+            Console.WriteLine($"\tSales Tax @{TaxRate * 100}% : ${SalesTax}\n");
+            Console.WriteLine($"\tGrand Total: ${GrandTotal}\n");
         }
     }
 }

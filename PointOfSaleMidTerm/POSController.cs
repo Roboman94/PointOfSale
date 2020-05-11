@@ -14,19 +14,19 @@ namespace PointOfSaleMidTerm
         }
         public void ProductAction(Product choice)
         {
-            if (InputUtil.GetYesNo("Would you like to order this item?") == false)
+            if (InputUtil.GetYesNo("Would you like to order this item? (y/n)") == false)
             {
                 return;
             }
 
             int qty = InputUtil.ReadInteger("\nHow many would you like?", 0, 25);
 
-            if (qty > 0 && InputUtil.GetYesNo("Add purchase?"))
+            if (qty > 0 && InputUtil.GetYesNo("Add purchase? (y/n)"))
             {
                 this.SelectedProducts.AddProduct(choice, qty);
             }
 
-            if (InputUtil.GetYesNo("\nWould you like to check out?"))
+            if (InputUtil.GetYesNo("\nWould you like to check out? (y/n)"))
             {
                 int method = InputUtil.ReadInteger(
                     "How are you paying today?\n\t1 = cash\n\t2 = check\n\t3 = charge\n\t4 = cancel", 1, 4);
@@ -45,6 +45,8 @@ namespace PointOfSaleMidTerm
                 else
                 {
                     paymentDetails.GetPayment(SelectedProducts.GetGrandTotal());
+                    Console.WriteLine();
+                    Console.WriteLine("Receipt:");
                     Receipt rcpt = new Receipt(SelectedProducts, paymentDetails);
                     rcpt.Display();
                     

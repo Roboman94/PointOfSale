@@ -25,6 +25,7 @@ namespace PointOfSaleMidTerm
         public static List<Product> LoadProductDb()
         {
             string pdbFilename = "../../../ProductData.txt";
+
             char separator = '|';
 
             List<Product> products = new List<Product>();
@@ -45,7 +46,7 @@ namespace PointOfSaleMidTerm
             }
             reader.Close();
             return products;
+           
         }
-    }
-
+    } 
 }
