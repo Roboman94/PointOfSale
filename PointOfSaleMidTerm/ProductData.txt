@@ -1,4 +1,4 @@
-﻿shirt|Clothing|1 size fits all|20.11|0
+﻿Shirt|Clothing|1 size fits all|20.11|0
 Hat|Clothing|1 size fits all|19.99|0
 Small coffee|Drink|A small coffee|1.99|0
 Medium coffee|Drink|A medium coffee|2.50|0
