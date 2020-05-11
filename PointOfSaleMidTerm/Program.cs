@@ -38,6 +38,7 @@ namespace PointOfSaleMidTerm
                     , prod[1]
                     , prod[2]
                     , double.Parse(prod[3])
+                    , double.Parse(prod[4])
                     );
                 products.Add(m);
                 line = reader.ReadLine();

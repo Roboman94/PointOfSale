@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PointOfSaleMidTerm
 {
@@ -15,7 +16,7 @@ namespace PointOfSaleMidTerm
             foreach (Product item in Items.Keys)
             {
                 if (item.Name == product.Name)
-                {
+                {           
                     Items[item] += qty;
                     found = true;
                     break;
@@ -23,9 +24,21 @@ namespace PointOfSaleMidTerm
             }
             if (!found)
             {
+                product.Qty = qty + product.Qty;
                 Items.Add(product, qty);
             }
         }
+
+        public virtual void Display()
+        {
+            Console.WriteLine();
+            foreach(Product item in Items.Keys)
+            {
+                Console.WriteLine($"Purchased: {item.Name} @${item.Price} Qty:{item.Qty}");
+            }
+            Console.WriteLine();
+        }
+
         public double GetTotal()
         {
             double total = 0;

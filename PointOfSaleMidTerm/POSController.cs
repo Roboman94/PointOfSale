@@ -21,7 +21,7 @@ namespace PointOfSaleMidTerm
 
             int qty = InputUtil.ReadInteger("\nHow many would you like?", 0, 25);
 
-            if (qty > 0 && InputUtil.GetYesNo("Confirm purchase?"))
+            if (qty > 0 && InputUtil.GetYesNo("Add purchase?"))
             {
                 this.SelectedProducts.AddProduct(choice, qty);
             }

@@ -6,6 +6,9 @@ namespace PointOfSaleMidTerm
     {
         public Cart ProductsCart { get; set; }
         public PaymentAbstract PaymentDetails { get; }
+
+
+
         public double Subtotal { get; set; }
         public double SalesTax { get; set; }
         public double GrandTotal { get; set; }
@@ -33,6 +36,7 @@ namespace PointOfSaleMidTerm
         }
         public void Display()
         {
+            ProductsCart.Display();
             this.DoTotal();
             PaymentDetails.Display();
             Console.WriteLine($"Subtotal: {Subtotal}\n");
