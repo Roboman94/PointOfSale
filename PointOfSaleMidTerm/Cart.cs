@@ -17,18 +17,17 @@ namespace PointOfSaleMidTerm
             {
                 if (item.Name == product.Name)
                 {
-                    product.Qty = qty + product.Qty;                
+                    //product.Qty = qty + product.Qty;                
                     Items[item] += qty;
                     found = true;
                     break;
                 }
             }
             if (!found)
-            {
-             
-                product.Qty = qty + product.Qty;    
+            {           
                 Items.Add(product, qty);
             }
+                product.Qty = qty + product.Qty;    
         }
 
         public virtual void Display()
@@ -60,6 +59,10 @@ namespace PointOfSaleMidTerm
         }
         public void Clear()
         {
+            foreach(Product q in Items.Keys)
+            {
+                q.Qty = 0;
+            }
             this.Items.Clear();
         }
     }
