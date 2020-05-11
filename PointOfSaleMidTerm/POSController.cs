@@ -26,9 +26,6 @@ namespace PointOfSaleMidTerm
                 this.SelectedProducts.AddProduct(choice, qty);
             }
 
-
-
-
             if (InputUtil.GetYesNo("\nWould you like to check out?"))
             {
                 int method = InputUtil.ReadInteger(
