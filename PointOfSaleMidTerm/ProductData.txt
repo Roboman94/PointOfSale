@@ -6,7 +6,7 @@ Large coffee|Drink|A large coffee|3.00|0
 Small latte|Drink|A small latte|2.50|0
 Medium latte|Drink|A medium latte|2.99|0
 Large latte|Drink|A large latte|3.50|0
-Eytg bagel|Food|Eytg bagel w/cream cheese|3.00|0
+Everything bagel|Food|Everything bagel w/cream cheese|3.00|0
 Cheese bagel|Food|Cheese bagel with cream cheese|3.00|0
 Plain bagel|Food|Plain bagel with cream cheese|3.00|0
 Bottled water|Drink|A bottle of water|1.00|0
