@@ -35,9 +35,9 @@ namespace PointOfSaleMidTerm
             Console.WriteLine();
             foreach(Product item in Items.Keys)
             {
-                Console.WriteLine($"Purchased: {item.Name} @${item.Price} Qty:{item.Qty}");
+                Console.WriteLine($"\tPurchased: {item.Name} @${item.Price} Qty:{item.Qty}\n");
             }
-            Console.WriteLine();
+         
         }
 
         public double GetTotal()

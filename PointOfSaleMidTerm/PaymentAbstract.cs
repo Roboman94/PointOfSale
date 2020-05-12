@@ -12,7 +12,7 @@ namespace PointOfSaleMidTerm
         public abstract void GetPayment(double GrandTotal);
         public virtual void Display()
         {
-            Console.WriteLine($"\tGrandtotal {GrandTotal}\n");
+            Console.WriteLine($"\tTotal ${GrandTotal}\n");
         }
     }
 }

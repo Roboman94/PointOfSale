@@ -18,7 +18,7 @@ namespace PointOfSaleMidTerm
             this.GrandTotal = grandtotal;
             double roundgrandtotal = Math.Round(GrandTotal, 2);
             this.GrandTotal = roundgrandtotal;
-            this.AmountTendered = InputUtil.ReadDouble($"Total is ${grandtotal}\nCash amount due : ", grandtotal, 10000);
+            this.AmountTendered = InputUtil.ReadDouble($"Total is ${grandtotal}\nCash amount: ", grandtotal, 10000);
             this.Change = this.AmountTendered - grandtotal;
             double roundchange = Math.Round(Change, 2);
             this.Change = roundchange;
@@ -26,7 +26,7 @@ namespace PointOfSaleMidTerm
         public override void Display()
         {
             base.Display();
-            Console.WriteLine($"\tAmountTendered: {AmountTendered}\n\tChange: {Change}\n");
+            Console.WriteLine($"\tAmountTendered: ${AmountTendered}\n\tChange: ${Change}\n");
         }
     }
 }

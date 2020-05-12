@@ -12,6 +12,7 @@ namespace PointOfSaleMidTerm
         }
         public override void GetPayment(double grandtotal)
         {
+            grandtotal = Math.Round(grandtotal, 2);
             this.GrandTotal = grandtotal;
             this.CheckNumber = InputUtil.GetInputString("Check number: ");
         }
