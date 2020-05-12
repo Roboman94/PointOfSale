@@ -16,6 +16,7 @@ namespace PointOfSaleMidTerm
         }
         public override void GetPayment(double grandtotal)
         {
+            grandtotal = Math.Round(grandtotal, 2);
             base.GrandTotal = grandtotal;
             this.CreditCardNumber = InputUtil.GetInputString("Credit card number: ");
             this.Expiration = InputUtil.GetInputDate("Expiration date (mm/dd/yyyy) :");
